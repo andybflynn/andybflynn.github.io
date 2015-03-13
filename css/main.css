@@ -51,6 +51,7 @@ body {
   font-size: 14px;
   font-family: "Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
   font-weight: 200;
+  overflow-x: hidden;
 }
 
 /* line 52, ../scss/_font.scss */
