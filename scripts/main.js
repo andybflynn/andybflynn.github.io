@@ -39,7 +39,7 @@ $(document).ready(function() {
 			, offsetPercentage = $smoothScrollEl.data('smooth-scroll-offset-percentage') || 0
 		;
 
-		Global.smoothScrollTo($target, offsetPercentage);
+		Global.smoothScrollTo($($target), offsetPercentage);
 	});
 	
 });
