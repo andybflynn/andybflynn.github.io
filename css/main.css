@@ -423,3 +423,12 @@ blockquote {
 [data-smooth-scroll] {
   cursor: pointer;
 }
+
+p.jobtitle {
+    font-weight: bold;
+}
+
+span.jobtime {
+    font-weight: 400;
+    font-style: italic;
+}
