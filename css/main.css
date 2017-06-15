@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Roboto:100,400,400italic);
+@import url('https://fonts.googleapis.com/css?family=Oswald:200,400|Roboto|Yellowtail');
 @font-face {
   font-family: 'icomoon';
   src: url("fonts/icomoon.eot?ud3og6");
@@ -49,8 +49,7 @@
 /* line 46, ../scss/_font.scss */
 body {
   font-size: 14px;
-  font-family: "Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
-  font-weight: 200;
+  font-family: "Roboto",Helvetica,Arial,sans-serif;
   overflow-x: hidden;
 }
 
@@ -59,7 +58,7 @@ h1, h2, h3, h4, h5, h6 {
   text-rendering: auto;
   color: inherit;
   font-weight: 400;
-  font-family: "Roboto", sans-serif;
+  font-family: "Yellowtail", sans-serif;
 }
 
 /* line 63, ../scss/_font.scss */
@@ -83,25 +82,10 @@ h2 {
   /* line 71, ../scss/_font.scss */
   h2 {
     font-size: 1.4rem;
-    letter-spacing: 10px;
+    letter-spacing: 6px;
   }
 }
 
-/* line 80, ../scss/_font.scss */
-.mainsplash p {
-  font-variant: normal;
-}
-
-/* line 84, ../scss/_font.scss */
-.bold {
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-/* line 89, ../scss/_font.scss */
-p {
-  font-weight: 200;
-}
 /* line 91, ../scss/_font.scss */
 p:first-child {
   margin-top: 0;
@@ -122,18 +106,6 @@ a:visited {
   color: #be7f9b;
   text-decoration: none;
   outline: 0;
-}
-/* line 109, ../scss/_font.scss */
-.mainsplash a {
-  color: white;
-}
-/* line 111, ../scss/_font.scss */
-.mainsplash a:hover {
-  color: white;
-}
-/* line 114, ../scss/_font.scss */
-.mainsplash a:visited {
-  color: white;
 }
 
 /* line 120, ../scss/_font.scss */
@@ -264,6 +236,26 @@ blockquote {
   font-variant: small-caps;
 }
 
+.mainsplash h1, .mainsplash h2 {
+  font-family: oswald, sans-serif;
+  font-weight: 200;
+}
+.mainsplash h2 {
+  font-weight: 400;
+}
+
+.mainsplash .classy {
+  font-family: yellowtail, serif;
+  font-variant: normal;
+  font-size: 1.1rem;
+}
+@media only screen and (min-width: 40.063em) {
+  /* line 71, ../scss/_font.scss */
+  .mainsplash .classy {
+    font-size: 1.8rem;
+  }
+}
+
 /* line 91, ../scss/_layout.scss */
 .logo {
   display: inline-block;
@@ -328,6 +320,7 @@ blockquote {
   width: 115%;
   margin-left: -7.5%;
   padding-left: 7.5%;
+  font-size: 2rem;
 }
 
 /* line 140, ../scss/_layout.scss */
@@ -424,6 +417,25 @@ blockquote {
   cursor: pointer;
 }
 
+
+[data-match-heights] {
+    display: inline;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+@media only screen and (min-width: 40.063em) {
+  [data-match-heights] {
+    display: flex;
+  }
+}
+
+[data-match-heights] .card {
+    flex: 1 1 50%;
+    flex-basis: calc(50% - 20px);
+    margin: 10px;
+}
+
 p.jobtitle {
     font-weight: bold;
 }
@@ -431,4 +443,5 @@ p.jobtitle {
 span.jobtime {
     font-weight: 400;
     font-style: italic;
+    white-space: nowrap;
 }
