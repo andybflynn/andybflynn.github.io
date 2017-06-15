@@ -98,14 +98,8 @@ a {
 }
 /* line 99, ../scss/_font.scss */
 a:hover {
-  color: #be7f9b;
+  color: #e04489;
   text-decoration: none;
-}
-/* line 103, ../scss/_font.scss */
-a:visited {
-  color: #be7f9b;
-  text-decoration: none;
-  outline: 0;
 }
 
 /* line 120, ../scss/_font.scss */
@@ -135,7 +129,7 @@ body {
 
 /* line 14, ../scss/_layout.scss */
 blockquote {
-  border-color: #7e405b;
+  border-color: #2ba6cb;
   border-width: 2px;
 }
 
@@ -282,7 +276,7 @@ blockquote {
 
 /* line 109, ../scss/_layout.scss */
 .overlay {
-  background-color: #9a4a3b;
+  background-color: #2285a2;
   opacity: 0.95;
   position: relative;
   width: 100%;
@@ -299,6 +293,7 @@ blockquote {
   -webkit-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.7), -1px -1px 1px rgba(255, 255, 255, 0.2);
   -moz-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.7), -1px -1px 1px rgba(255, 255, 255, 0.2);
   box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.7), -1px -1px 1px rgba(255, 255, 255, 0.2);
+  text-align: center;
 }
 /* line 120, ../scss/_layout.scss */
 .overlay .information {
@@ -321,6 +316,12 @@ blockquote {
   margin-left: -7.5%;
   padding-left: 7.5%;
   font-size: 2rem;
+  margin-top: 1.2em;
+  margin-bottom: .5em;
+}
+
+.popout.first {
+  margin-top: 0;
 }
 
 /* line 140, ../scss/_layout.scss */
@@ -375,7 +376,7 @@ blockquote {
 }
 /* line 171, ../scss/_layout.scss */
 .contactIcons a:hover {
-  color: #bb5e4d;
+  color: #ab2e65;
 }
 /* line 175, ../scss/_layout.scss */
 .contactIcons .icon {
@@ -444,4 +445,12 @@ span.jobtime {
     font-weight: 400;
     font-style: italic;
     white-space: nowrap;
+}
+
+p a, li a {
+    color: #2285a2;
+}
+
+p a:visited, li a:visited, p a:hover, li a:hover {
+    color: #7f9fa9;
 }
