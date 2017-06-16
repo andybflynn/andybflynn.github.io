@@ -445,6 +445,10 @@ span.jobtime {
     font-weight: 400;
     font-style: italic;
     white-space: nowrap;
+    display: block;
+}
+.card--front {
+    text-align: center;
 }
 
 p a, li a {
