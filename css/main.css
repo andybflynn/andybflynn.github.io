@@ -118,7 +118,7 @@ blockquote cite {
 
 /* line 4, ../scss/_layout.scss */
 body {
-  background-color: #fafafa;
+  background-color: #f2f2f2;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -175,7 +175,7 @@ blockquote {
 
 /* line 53, ../scss/_layout.scss */
 .mainTextArea {
-  background: #fafafa;
+  background: #f2f2f2;
 }
 
 /* line 57, ../scss/_layout.scss */
@@ -187,7 +187,7 @@ blockquote {
   .mobileScroll {
     display: block;
     position: absolute;
-    background: #fafafa;
+    background: #f2f2f2;
     top: -34px;
     height: 72px;
     width: 72px;
@@ -303,6 +303,7 @@ blockquote {
 
 /* line 126, ../scss/_layout.scss */
 .card {
+  background-color: #fff;
   box-shadow: 2px 2px 5px -2px #000000, 1px 1px 9px -3px #545454;
   padding: 1em;
   margin-bottom: 1em;
@@ -329,7 +330,7 @@ blockquote {
   width: 25%;
   min-width: 350px;
   max-height: 90%;
-  background-color: #fafafa;
+  background-color: #f2f2f2;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
