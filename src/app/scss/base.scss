@@ -9,6 +9,7 @@ html {
 body {
   overflow-x: hidden;
   color: $baseFontColor;
+  background-image: url('../img/lightpaperfibers.png');
 }
 
 a {
@@ -17,7 +18,7 @@ a {
     color: $baseFontColor;
   }
   &:hover {
-    color: lighten($baseFontColor, 25%);
+    color: $linkHoverColor;
     text-decoration: none;
   }
 }

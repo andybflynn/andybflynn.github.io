@@ -2,7 +2,6 @@
 
 .mainHeader {
   align-items: center;
-  background-color: white;
   display: flex;
   justify-content: center;
   position: relative;
@@ -34,5 +33,9 @@
     color: $baseFontColor;
     font-family: roboto;
     padding: 1rem;
+  }
+
+  .mainHeader__highlight {
+    color: $linkHoverColor;
   }
 }
