@@ -372,127 +372,6 @@ module.exports = emptyFunction;
 
 /***/ }),
 /* 4 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/*
-object-assign
-(c) Sindre Sorhus
-@license MIT
-*/
-
-
-/* eslint-disable no-unused-vars */
-var getOwnPropertySymbols = Object.getOwnPropertySymbols;
-var hasOwnProperty = Object.prototype.hasOwnProperty;
-var propIsEnumerable = Object.prototype.propertyIsEnumerable;
-
-function toObject(val) {
-	if (val === null || val === undefined) {
-		throw new TypeError('Object.assign cannot be called with null or undefined');
-	}
-
-	return Object(val);
-}
-
-function shouldUseNative() {
-	try {
-		if (!Object.assign) {
-			return false;
-		}
-
-		// Detect buggy property enumeration order in older V8 versions.
-
-		// https://bugs.chromium.org/p/v8/issues/detail?id=4118
-		var test1 = new String('abc');  // eslint-disable-line no-new-wrappers
-		test1[5] = 'de';
-		if (Object.getOwnPropertyNames(test1)[0] === '5') {
-			return false;
-		}
-
-		// https://bugs.chromium.org/p/v8/issues/detail?id=3056
-		var test2 = {};
-		for (var i = 0; i < 10; i++) {
-			test2['_' + String.fromCharCode(i)] = i;
-		}
-		var order2 = Object.getOwnPropertyNames(test2).map(function (n) {
-			return test2[n];
-		});
-		if (order2.join('') !== '0123456789') {
-			return false;
-		}
-
-		// https://bugs.chromium.org/p/v8/issues/detail?id=3056
-		var test3 = {};
-		'abcdefghijklmnopqrst'.split('').forEach(function (letter) {
-			test3[letter] = letter;
-		});
-		if (Object.keys(Object.assign({}, test3)).join('') !==
-				'abcdefghijklmnopqrst') {
-			return false;
-		}
-
-		return true;
-	} catch (err) {
-		// We don't expect any of the above to throw, but better to be safe.
-		return false;
-	}
-}
-
-module.exports = shouldUseNative() ? Object.assign : function (target, source) {
-	var from;
-	var to = toObject(target);
-	var symbols;
-
-	for (var s = 1; s < arguments.length; s++) {
-		from = Object(arguments[s]);
-
-		for (var key in from) {
-			if (hasOwnProperty.call(from, key)) {
-				to[key] = from[key];
-			}
-		}
-
-		if (getOwnPropertySymbols) {
-			symbols = getOwnPropertySymbols(from);
-			for (var i = 0; i < symbols.length; i++) {
-				if (propIsEnumerable.call(from, symbols[i])) {
-					to[symbols[i]] = from[symbols[i]];
-				}
-			}
-		}
-	}
-
-	return to;
-};
-
-
-/***/ }),
-/* 5 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- */
-
-
-
-var emptyObject = {};
-
-if (process.env.NODE_ENV !== 'production') {
-  Object.freeze(emptyObject);
-}
-
-module.exports = emptyObject;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
-
-/***/ }),
-/* 6 */
 /***/ (function(module, exports) {
 
 /*
@@ -574,7 +453,7 @@ function toComment(sourceMap) {
 
 
 /***/ }),
-/* 7 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -946,6 +825,127 @@ function updateLink (link, options, obj) {
 
 
 /***/ }),
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/*
+object-assign
+(c) Sindre Sorhus
+@license MIT
+*/
+
+
+/* eslint-disable no-unused-vars */
+var getOwnPropertySymbols = Object.getOwnPropertySymbols;
+var hasOwnProperty = Object.prototype.hasOwnProperty;
+var propIsEnumerable = Object.prototype.propertyIsEnumerable;
+
+function toObject(val) {
+	if (val === null || val === undefined) {
+		throw new TypeError('Object.assign cannot be called with null or undefined');
+	}
+
+	return Object(val);
+}
+
+function shouldUseNative() {
+	try {
+		if (!Object.assign) {
+			return false;
+		}
+
+		// Detect buggy property enumeration order in older V8 versions.
+
+		// https://bugs.chromium.org/p/v8/issues/detail?id=4118
+		var test1 = new String('abc');  // eslint-disable-line no-new-wrappers
+		test1[5] = 'de';
+		if (Object.getOwnPropertyNames(test1)[0] === '5') {
+			return false;
+		}
+
+		// https://bugs.chromium.org/p/v8/issues/detail?id=3056
+		var test2 = {};
+		for (var i = 0; i < 10; i++) {
+			test2['_' + String.fromCharCode(i)] = i;
+		}
+		var order2 = Object.getOwnPropertyNames(test2).map(function (n) {
+			return test2[n];
+		});
+		if (order2.join('') !== '0123456789') {
+			return false;
+		}
+
+		// https://bugs.chromium.org/p/v8/issues/detail?id=3056
+		var test3 = {};
+		'abcdefghijklmnopqrst'.split('').forEach(function (letter) {
+			test3[letter] = letter;
+		});
+		if (Object.keys(Object.assign({}, test3)).join('') !==
+				'abcdefghijklmnopqrst') {
+			return false;
+		}
+
+		return true;
+	} catch (err) {
+		// We don't expect any of the above to throw, but better to be safe.
+		return false;
+	}
+}
+
+module.exports = shouldUseNative() ? Object.assign : function (target, source) {
+	var from;
+	var to = toObject(target);
+	var symbols;
+
+	for (var s = 1; s < arguments.length; s++) {
+		from = Object(arguments[s]);
+
+		for (var key in from) {
+			if (hasOwnProperty.call(from, key)) {
+				to[key] = from[key];
+			}
+		}
+
+		if (getOwnPropertySymbols) {
+			symbols = getOwnPropertySymbols(from);
+			for (var i = 0; i < symbols.length; i++) {
+				if (propIsEnumerable.call(from, symbols[i])) {
+					to[symbols[i]] = from[symbols[i]];
+				}
+			}
+		}
+	}
+
+	return to;
+};
+
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(process) {/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ *
+ */
+
+
+
+var emptyObject = {};
+
+if (process.env.NODE_ENV !== 'production') {
+  Object.freeze(emptyObject);
+}
+
+module.exports = emptyObject;
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
 /* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1303,7 +1303,11 @@ var _card = __webpack_require__(35);
 
 var _card2 = _interopRequireDefault(_card);
 
-__webpack_require__(38);
+var _footer = __webpack_require__(38);
+
+var _footer2 = _interopRequireDefault(_footer);
+
+__webpack_require__(41);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1354,6 +1358,11 @@ ReactDOM.render(React.createElement(
             'li',
             null,
             'React/Redux'
+          ),
+          React.createElement(
+            'li',
+            null,
+            'Angular JS'
           ),
           React.createElement(
             'li',
@@ -1420,7 +1429,7 @@ ReactDOM.render(React.createElement(
           React.createElement(
             'li',
             null,
-            'Angular JS'
+            'Vue JS'
           ),
           React.createElement(
             'li',
@@ -1594,7 +1603,7 @@ ReactDOM.render(React.createElement(
     ),
     React.createElement(
       _section2.default,
-      { title: 'Contact' },
+      { title: 'Contact', classes: ['contact'] },
       React.createElement(
         'p',
         null,
@@ -1603,6 +1612,7 @@ ReactDOM.render(React.createElement(
       React.createElement(
         'p',
         null,
+        React.createElement('span', { className: 'icon icon-mail' }),
         React.createElement(
           'a',
           { rel: 'nofollow', href: '#' },
@@ -1612,6 +1622,7 @@ ReactDOM.render(React.createElement(
       React.createElement(
         'p',
         null,
+        React.createElement('span', { className: 'icon icon-twitter' }),
         React.createElement(
           'a',
           { rel: 'nofollow', href: 'https://twitter.com/andybflynn' },
@@ -1621,6 +1632,7 @@ ReactDOM.render(React.createElement(
       React.createElement(
         'p',
         null,
+        React.createElement('span', { className: 'icon icon-facebook' }),
         React.createElement(
           'a',
           { rel: 'nofollow', href: 'https://facebook.com/andybflynn' },
@@ -1630,13 +1642,15 @@ ReactDOM.render(React.createElement(
       React.createElement(
         'p',
         null,
+        React.createElement('span', { className: 'icon icon-linkedin' }),
         React.createElement(
           'a',
           { rel: 'nofollow', href: 'https://www.linkedin.com/profile/view?id=51764240' },
           'LinkedIn'
         )
       )
-    )
+    ),
+    React.createElement(_footer2.default, null)
   )
 ), document.getElementById('app'));
 
@@ -1654,7 +1668,7 @@ ReactDOM.render(React.createElement(
  * LICENSE file in the root directory of this source tree.
  */
 
-var k=__webpack_require__(4),n=__webpack_require__(2),p=__webpack_require__(5),q=__webpack_require__(3),r="function"===typeof Symbol&&Symbol.for,t=r?Symbol.for("react.element"):60103,u=r?Symbol.for("react.portal"):60106,v=r?Symbol.for("react.fragment"):60107,w=r?Symbol.for("react.strict_mode"):60108,x=r?Symbol.for("react.profiler"):60114,y=r?Symbol.for("react.provider"):60109,z=r?Symbol.for("react.context"):60110,A=r?Symbol.for("react.async_mode"):60111,B=
+var k=__webpack_require__(6),n=__webpack_require__(2),p=__webpack_require__(7),q=__webpack_require__(3),r="function"===typeof Symbol&&Symbol.for,t=r?Symbol.for("react.element"):60103,u=r?Symbol.for("react.portal"):60106,v=r?Symbol.for("react.fragment"):60107,w=r?Symbol.for("react.strict_mode"):60108,x=r?Symbol.for("react.profiler"):60114,y=r?Symbol.for("react.provider"):60109,z=r?Symbol.for("react.context"):60110,A=r?Symbol.for("react.async_mode"):60111,B=
 r?Symbol.for("react.forward_ref"):60112;r&&Symbol.for("react.timeout");var C="function"===typeof Symbol&&Symbol.iterator;function D(a){for(var b=arguments.length-1,e="https://reactjs.org/docs/error-decoder.html?invariant="+a,c=0;c<b;c++)e+="&args[]="+encodeURIComponent(arguments[c+1]);n(!1,"Minified React error #"+a+"; visit %s for the full message or use the non-minified dev environment for full errors and additional helpful warnings. ",e)}
 var E={isMounted:function(){return!1},enqueueForceUpdate:function(){},enqueueReplaceState:function(){},enqueueSetState:function(){}};function F(a,b,e){this.props=a;this.context=b;this.refs=p;this.updater=e||E}F.prototype.isReactComponent={};F.prototype.setState=function(a,b){"object"!==typeof a&&"function"!==typeof a&&null!=a?D("85"):void 0;this.updater.enqueueSetState(this,a,b,"setState")};F.prototype.forceUpdate=function(a){this.updater.enqueueForceUpdate(this,a,"forceUpdate")};function G(){}
 G.prototype=F.prototype;function H(a,b,e){this.props=a;this.context=b;this.refs=p;this.updater=e||E}var I=H.prototype=new G;I.constructor=H;k(I,F.prototype);I.isPureReactComponent=!0;var J={current:null},K=Object.prototype.hasOwnProperty,L={key:!0,ref:!0,__self:!0,__source:!0};
@@ -1691,9 +1705,9 @@ if (process.env.NODE_ENV !== "production") {
   (function() {
 'use strict';
 
-var _assign = __webpack_require__(4);
+var _assign = __webpack_require__(6);
 var invariant = __webpack_require__(2);
-var emptyObject = __webpack_require__(5);
+var emptyObject = __webpack_require__(7);
 var warning = __webpack_require__(8);
 var emptyFunction = __webpack_require__(3);
 var checkPropTypes = __webpack_require__(9);
@@ -3245,7 +3259,7 @@ if (process.env.NODE_ENV === 'production') {
 /*
  Modernizr 3.0.0pre (Custom Build) | MIT
 */
-var aa=__webpack_require__(2),ba=__webpack_require__(1),m=__webpack_require__(10),p=__webpack_require__(4),v=__webpack_require__(3),da=__webpack_require__(11),ea=__webpack_require__(12),fa=__webpack_require__(13),ha=__webpack_require__(5);
+var aa=__webpack_require__(2),ba=__webpack_require__(1),m=__webpack_require__(10),p=__webpack_require__(6),v=__webpack_require__(3),da=__webpack_require__(11),ea=__webpack_require__(12),fa=__webpack_require__(13),ha=__webpack_require__(7);
 function A(a){for(var b=arguments.length-1,c="https://reactjs.org/docs/error-decoder.html?invariant="+a,d=0;d<b;d++)c+="&args[]="+encodeURIComponent(arguments[d+1]);aa(!1,"Minified React error #"+a+"; visit %s for the full message or use the non-minified dev environment for full errors and additional helpful warnings. ",c)}ba?void 0:A("227");
 function ia(a,b,c,d,e,f,g,h,k){this._hasCaughtError=!1;this._caughtError=null;var n=Array.prototype.slice.call(arguments,3);try{b.apply(c,n)}catch(r){this._caughtError=r,this._hasCaughtError=!0}}
 var B={_caughtError:null,_hasCaughtError:!1,_rethrowError:null,_hasRethrowError:!1,invokeGuardedCallback:function(a,b,c,d,e,f,g,h,k){ia.apply(B,arguments)},invokeGuardedCallbackAndCatchFirstError:function(a,b,c,d,e,f,g,h,k){B.invokeGuardedCallback.apply(this,arguments);if(B.hasCaughtError()){var n=B.clearCaughtError();B._hasRethrowError||(B._hasRethrowError=!0,B._rethrowError=n)}},rethrowCaughtError:function(){return ka.apply(B,arguments)},hasCaughtError:function(){return B._hasCaughtError},clearCaughtError:function(){if(B._hasCaughtError){var a=
@@ -3557,13 +3571,13 @@ var invariant = __webpack_require__(2);
 var React = __webpack_require__(1);
 var warning = __webpack_require__(8);
 var ExecutionEnvironment = __webpack_require__(10);
-var _assign = __webpack_require__(4);
+var _assign = __webpack_require__(6);
 var emptyFunction = __webpack_require__(3);
 var checkPropTypes = __webpack_require__(9);
 var getActiveElement = __webpack_require__(11);
 var shallowEqual = __webpack_require__(12);
 var containsNode = __webpack_require__(13);
-var emptyObject = __webpack_require__(5);
+var emptyObject = __webpack_require__(7);
 var hyphenateStyleName = __webpack_require__(23);
 var camelizeStyleName = __webpack_require__(25);
 
@@ -21161,7 +21175,7 @@ function Header() {
       React.createElement(
         'h1',
         null,
-        React.createElement('img', { alt: 'Andy written in Japanese script', src: _andykanji2.default })
+        React.createElement('img', { className: 'card', alt: 'Andy written in Japanese script', src: _andykanji2.default })
       ),
       React.createElement(
         'h2',
@@ -21193,7 +21207,7 @@ var transform;
 var options = {"hmr":true}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(7)(content, options);
+var update = __webpack_require__(5)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -21213,12 +21227,12 @@ if(false) {
 /* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(6)(false);
+exports = module.exports = __webpack_require__(4)(false);
 // imports
 
 
 // module
-exports.push([module.i, ".mainHeader {\n  align-items: center;\n  background-color: white;\n  display: flex;\n  justify-content: center;\n  position: relative;\n  height: 100vh;\n  width: 100vw; }\n  .mainHeader div {\n    align-items: center;\n    display: flex;\n    flex-direction: column; }\n  .mainHeader h1 {\n    color: #333;\n    font-family: sans-serif;\n    font-size: 6em;\n    padding-right: 7px;\n    text-orientation: upright;\n    writing-mode: vertical-rl; }\n    .mainHeader h1 img {\n      height: 70vh; }\n  .mainHeader h2 {\n    border: 2px solid #999;\n    border-radius: 2px;\n    color: #444;\n    font-family: roboto;\n    padding: 1rem; }\n  .mainHeader .mainHeader__highlight {\n    color: #b4222a; }\n", ""]);
+exports.push([module.i, ".mainHeader {\n  align-items: center;\n  display: flex;\n  justify-content: center;\n  position: relative;\n  height: 100vh;\n  width: 100vw; }\n  .mainHeader div {\n    align-items: center;\n    display: flex;\n    flex-direction: column; }\n  .mainHeader h1 {\n    color: #333;\n    font-family: sans-serif;\n    font-size: 6em;\n    padding-right: 7px;\n    text-orientation: upright;\n    writing-mode: vertical-rl; }\n    .mainHeader h1 img {\n      height: 70vh; }\n      @media (max-width: 480px) {\n        .mainHeader h1 img {\n          height: 50vh; } }\n  .mainHeader h2 {\n    border: 2px solid #999;\n    border-radius: 2px;\n    color: #444;\n    font-family: roboto;\n    padding: 1rem; }\n  .mainHeader .mainHeader__highlight {\n    color: #b4222a; }\n", ""]);
 
 // exports
 
@@ -21384,7 +21398,7 @@ var transform;
 var options = {"hmr":true}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(7)(content, options);
+var update = __webpack_require__(5)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -21404,7 +21418,7 @@ if(false) {
 /* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(6)(false);
+exports = module.exports = __webpack_require__(4)(false);
 // imports
 
 
@@ -21483,7 +21497,7 @@ var transform;
 var options = {"hmr":true}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(7)(content, options);
+var update = __webpack_require__(5)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -21503,12 +21517,12 @@ if(false) {
 /* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(6)(false);
+exports = module.exports = __webpack_require__(4)(false);
 // imports
 
 
 // module
-exports.push([module.i, ".card {\n  border: 2px solid #999;\n  box-shadow: -3px 3px 3px 0px #ccc;\n  box-sizing: border-box;\n  flex: 0 1 calc(50% - 3rem);\n  padding: 1rem 2rem;\n  margin: 1rem 1.5rem; }\n  .card .card__jobtitle, .card h3, .card .card__jobtime {\n    text-align: center; }\n  .card .card__jobtime {\n    display: block; }\n", ""]);
+exports.push([module.i, ".card {\n  background-color: white;\n  border: 2px solid #999;\n  box-shadow: -3px 3px 3px 0px #ccc;\n  box-sizing: border-box;\n  flex: 0 1 calc(50% - 3rem);\n  padding: 1rem 2rem;\n  margin: 1rem 1.5rem; }\n  @media (max-width: 480px) {\n    .card {\n      flex-basis: 100%; } }\n  .card .card__jobtitle, .card h3, .card .card__jobtime {\n    text-align: center; }\n  .card .card__jobtitle {\n    font-weight: bold; }\n  .card .card__jobtime {\n    display: block;\n    font-weight: normal; }\n", ""]);
 
 // exports
 
@@ -21517,10 +21531,70 @@ exports.push([module.i, ".card {\n  border: 2px solid #999;\n  box-shadow: -3px 
 /* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = Footer;
+
+var _react = __webpack_require__(1);
+
+var React = _interopRequireWildcard(_react);
+
+__webpack_require__(39);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+function Footer() {
+  return React.createElement(
+    'footer',
+    null,
+    React.createElement(
+      'p',
+      null,
+      'This website was built using React, Webpack and Babel using images from ',
+      React.createElement(
+        'a',
+        { rel: 'nofollow', href: 'https://www.toptal.com/designers/subtlepatterns/light-paper-fibers/' },
+        'toptal.com'
+      ),
+      ' and ',
+      React.createElement(
+        'a',
+        { rel: 'nofollow', href: 'https://kanji.world/kanjiname/' },
+        'kanji.world'
+      ),
+      '.'
+    ),
+    React.createElement(
+      'p',
+      null,
+      'This website uses cookies for analytics purposes (counting you as a unique visitor) but not for anything ',
+      React.createElement(
+        'strong',
+        null,
+        'evil'
+      ),
+      '.'
+    ),
+    React.createElement(
+      'p',
+      null,
+      'I like to work outside my comfort zone. If I\'ve done anything spectacularly wrong, please let me know!'
+    )
+  );
+}
+
+/***/ }),
+/* 39 */
+/***/ (function(module, exports, __webpack_require__) {
+
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(39);
+var content = __webpack_require__(40);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -21528,7 +21602,52 @@ var transform;
 var options = {"hmr":true}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(7)(content, options);
+var update = __webpack_require__(5)(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/sass-loader/lib/loader.js!./footer.scss", function() {
+			var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/sass-loader/lib/loader.js!./footer.scss");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 40 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(4)(false);
+// imports
+
+
+// module
+exports.push([module.i, "footer {\n  color: #848484;\n  font-style: italic;\n  text-align: center; }\n  footer p {\n    font-size: 1.2rem; }\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 41 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(42);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {"hmr":true}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__(5)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -21545,22 +21664,22 @@ if(false) {
 }
 
 /***/ }),
-/* 39 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var escape = __webpack_require__(40);
-exports = module.exports = __webpack_require__(6)(false);
+var escape = __webpack_require__(43);
+exports = module.exports = __webpack_require__(4)(false);
 // imports
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Roboto);", ""]);
 
 // module
-exports.push([module.i, "html {\n  font-size: 10px;\n  font-family: roboto; }\n\nbody {\n  overflow-x: hidden;\n  color: #444;\n  background-image: url(" + escape(__webpack_require__(41)) + "); }\n\na {\n  color: #444; }\n  a:visited, a:active {\n    color: #444; }\n  a:hover {\n    color: #b4222a;\n    text-decoration: none; }\n\nh1 {\n  font-size: 4rem; }\n\nh2 {\n  font-size: 2.8rem; }\n\nh3 {\n  font-size: 2.0rem; }\n\nh4 {\n  font-size: 1.8rem; }\n\np, li {\n  font-size: 1.6rem; }\n\nmain {\n  max-width: 1028px;\n  padding: 0 1rem;\n  margin: 0 auto; }\n\n.experience {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-around; }\n  .experience > div {\n    flex: 0 1 50%; }\n\n.cards {\n  display: flex;\n  flex: 0 1 100%;\n  flex-wrap: wrap; }\n", ""]);
+exports.push([module.i, "@font-face {\n  font-family: 'icomoon';\n  src: url(" + escape(__webpack_require__(44)) + ");\n  src: url(" + escape(__webpack_require__(45)) + "?#iefixud3og6) format(\"embedded-opentype\"), url(" + escape(__webpack_require__(46)) + ") format(\"woff\"), url(" + escape(__webpack_require__(47)) + ") format(\"truetype\"), url(" + escape(__webpack_require__(48)) + "#icomoon) format(\"svg\");\n  font-weight: normal;\n  font-style: normal; }\n\n[class^=\"icon-\"], [class*=\" icon-\"] {\n  font-family: 'icomoon';\n  speak: none;\n  font-style: normal;\n  font-weight: normal;\n  font-variant: normal;\n  text-transform: none;\n  line-height: 1;\n  /* Better Font Rendering =========== */\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale; }\n\n.icon-mail:before {\n  content: \"\\E600\"; }\n\n.icon-facebook:before {\n  content: \"\\E601\"; }\n\n.icon-twitter:before {\n  content: \"\\E602\"; }\n\n.icon-linkedin:before {\n  content: \"\\E603\"; }\n\nhtml {\n  font-size: 10px;\n  font-family: roboto; }\n\nbody {\n  overflow-x: hidden;\n  color: #444;\n  background-image: url(" + escape(__webpack_require__(49)) + "); }\n\na {\n  color: #444; }\n  a:visited, a:active {\n    color: #444; }\n  a:hover {\n    color: #b4222a;\n    text-decoration: none; }\n\nh1 {\n  font-size: 4rem; }\n\nh2 {\n  font-size: 2.8rem; }\n\nh3 {\n  font-size: 2.0rem; }\n\nh4 {\n  font-size: 1.8rem; }\n\np, li {\n  font-size: 1.6rem; }\n\nmain {\n  max-width: 1028px;\n  padding: 0 1rem;\n  margin: 0 auto; }\n\n.experience {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-around; }\n  .experience > div {\n    flex: 0 1 50%; }\n    @media (max-width: 480px) {\n      .experience > div {\n        flex-basis: 100%; } }\n\n.contact .icon {\n  margin-right: .5em;\n  position: relative;\n  top: 2px; }\n\n.cards {\n  display: flex;\n  flex: 0 1 100%;\n  flex-wrap: wrap; }\n", ""]);
 
 // exports
 
 
 /***/ }),
-/* 40 */
+/* 43 */
 /***/ (function(module, exports) {
 
 module.exports = function escape(url) {
@@ -21582,7 +21701,37 @@ module.exports = function escape(url) {
 
 
 /***/ }),
-/* 41 */
+/* 44 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "f557877b5f20718542ff57426a040df5.eot";
+
+/***/ }),
+/* 45 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "f557877b5f20718542ff57426a040df5.eot";
+
+/***/ }),
+/* 46 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "b344fe005e5b9e305a4845e6a66a4fb7.woff";
+
+/***/ }),
+/* 47 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "03c84dccdb623c36599d045c2821e26b.ttf";
+
+/***/ }),
+/* 48 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "a047c9931cea91adf2654f81920997fe.svg";
+
+/***/ }),
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "498f5053b968f00f2b1919224ccea4fc.png";

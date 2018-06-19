@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 @import './variables';
+@import './fonts';
 
 html {
   font-size: 10px;
@@ -56,7 +57,17 @@ main {
 
   > div {
     flex: 0 1 50%;
+
+    @media (max-width: 480px) {
+      flex-basis: 100%;
+    }
   }
+}
+
+.contact .icon {
+  margin-right: .5em;
+  position: relative;
+  top: 2px;
 }
 
 .cards {

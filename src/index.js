@@ -3,21 +3,26 @@ import * as ReactDOM from 'react-dom';
 import Header from 'components/header';
 import Section from 'components/section';
 import Card from 'components/card';
+import Footer from 'components/footer';
 import 'styles/base.scss';
 
 ReactDOM.render(
   <div>
     <Header />
     <main>
-    <p>Hi, I'm Andy.
-            I work as a web developer and a software engineer. I've been programming since around 2005 when I started at The University of Exeter, and have been developing software and websites ever since.</p>
-            <p>If you're interested in chatting about any of the work I've done previously, please <a data-smooth-scroll data-smooth-scroll-target="#contact" href="#contact">contact me!</a></p>
+      <p>
+        Hi, I'm Andy. I work as a web developer and a software engineer. I've been programming since around 2005 when I started at The University of Exeter, and have been developing software and websites ever since.
+      </p>
+      <p>
+        If you're interested in chatting about any of the work I've done previously, please <a data-smooth-scroll data-smooth-scroll-target="#contact" href="#contact">contact me!</a>
+      </p>
       <Section title="Experience" classes={['experience']}>
         <div>
           <h4>I'm great at these:</h4>
           <ul>
               <li>JavaScript + jQuery</li>
               <li>React/Redux</li>
+              <li>Angular JS</li>
               <li>CSS/SCSS</li>
               <li>Responsive design (Bootstrap/Foundation)</li>
               <li>Optimising for mobile performance</li>
@@ -32,7 +37,7 @@ ReactDOM.render(
           <ul>
             <li>Node JS</li>
             <li>Express</li>
-            <li>Angular JS</li>
+            <li>Vue JS</li>
             <li>Angular 2+</li>
             <li>SQL</li>
             <li>Python</li>
@@ -73,29 +78,34 @@ ReactDOM.render(
           </Card>
         </div>
       </Section>
-      <Section title="Contact">
-      <p>If you want to get in touch don't hesitate to drop me a line at any of the following:</p>
-      <p>
-        <a rel="nofollow" href="#">
-          andy@andybflynn.com
-        </a>
-      </p>
-      <p>
-        <a rel="nofollow" href="https://twitter.com/andybflynn">
-          Twitter
-        </a>
-      </p>
-      <p>
-        <a rel="nofollow" href="https://facebook.com/andybflynn">
-          Facebook
-        </a>
-      </p>
-      <p>
-        <a rel="nofollow" href="https://www.linkedin.com/profile/view?id=51764240">
-          LinkedIn
-        </a>
-      </p>
+      <Section title="Contact" classes={['contact']}>
+        <p>If you want to get in touch don't hesitate to drop me a line at any of the following:</p>
+        <p>
+          <span className="icon icon-mail" />
+          <a rel="nofollow" href="#">
+            andy@andybflynn.com
+          </a>
+        </p>
+        <p>
+          <span className="icon icon-twitter" />
+          <a rel="nofollow" href="https://twitter.com/andybflynn">
+            Twitter
+          </a>
+        </p>
+        <p>
+          <span className="icon icon-facebook" />
+          <a rel="nofollow" href="https://facebook.com/andybflynn">
+            Facebook
+          </a>
+        </p>
+        <p>
+          <span className="icon icon-linkedin" />
+          <a rel="nofollow" href="https://www.linkedin.com/profile/view?id=51764240">
+            LinkedIn
+          </a>
+        </p>
       </Section>
+      <Footer />
     </main>
   </div>
 , document.getElementById('app'));

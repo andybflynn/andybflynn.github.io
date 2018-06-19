@@ -35,7 +35,7 @@ const config = {
 					},
 				],
 			}, {
-				test: /\.(png|svg|jpg|gif)?$/,
+				test: /\.(png|svg|jpg|gif|eot|ttf|woff)?$/,
 				exclude: /node_modules/,
 				use: {
 					loader: 'file-loader',

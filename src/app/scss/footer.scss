@@ -1,0 +1,11 @@
+@import './variables';
+
+footer {
+  color: lighten($baseFontColor, 25%);
+  font-style: italic;
+  text-align: center;
+
+  p {
+    font-size: 1.2rem;
+  }
+}
