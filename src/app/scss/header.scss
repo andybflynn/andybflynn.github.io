@@ -1,4 +1,5 @@
 @import './variables';
+@import './placeholders';
 
 .mainHeader {
   align-items: center;
@@ -23,6 +24,7 @@
     writing-mode: vertical-rl;
 
     img {
+      @extend %card;
       height: 70vh;
 
       @media (max-width: 480px) {

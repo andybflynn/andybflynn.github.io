@@ -2,7 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 
 const config = {
-	//devtool: 'cheap-eval-source-map',
+	devtool: 'cheap-eval-source-map',
 	entry: {
 		index: path.resolve(__dirname, 'src/index.js'),
     fourOhFour: path.resolve(__dirname, 'src/fourOhFour.js'),
@@ -13,7 +13,7 @@ const config = {
 	},
 	devServer: {
 		port: 9500,
-		contentBase: path.join(__dirname, 'dist'),
+		contentBase: path.join(__dirname, './'),
 	},
 	module: {
 		rules: [
