@@ -44,23 +44,23 @@ ReactDOM.render(
             <li>Python</li>
           </ul>
         </div>
+        <section>
+          <div className="cards">
+            <Card name="RSA Group" url="https://www.rsagroup.com/" position="Senior Front End Developer" dates="2016 - Present">
+              <p>Working to deliver responsive front end solutions for a variety of use cases, using appropriate technologies (Angular, React, Django CMS). Delivered a new CMS driven brochureware site in <a rel="nofollow" href="https://www.morethan.com">Morethan.com</a>, liaising with the back end and design teams. Another heavy focus on mobile pages with responsive CSS. Ran regular "Dojo" sessions with the team as part of a learning and development program.</p>
+            </Card>
+            <Card name="TUI Group SHG" url="https://www.tuigroup.com/en-en" position="Front End Web Developer" dates="2013 - 2016">
+              <p>Working as part of the Front End development team on <a rel="nofollow" href="https://www.hayesandjarvis.co.uk">Hayes and Jarvis</a> and <a rel="nofollow" href="https://www.citalia.com">Citalia</a> for Specialist Holidays Group (SHG). Coding standards compliant HTML and CSS, based on UX designs and liaising with the back end team for data pull-through from Hybris CMS. Efficient and optimized JavaScript/jQuery code required for progressive enhancement. A heavy focus on mobile pages with responsive CSS.</p>
+            </Card>
+            <Card name="APH" url="https://www.aph.com" position="Web Developer" dates="2010 - 2013">
+              <p>Primarily company facing software development, with a focus on web technologies (SQL, Javascript/JQuery, ASP.Net) and some customer facing web maintenance of the current APH website. In 2012 my team completed the launch of our new creative with no down time and no major errors. </p>
+            </Card>
+            <Card name="Mobius Solutions Ltd" url="https://www.linkedin.com/company-beta/572171/" position="Software Developer" dates="2009 - 2010">
+              <p>Role mainly focusing on new and upcoming web technologies, some desktop development software. Role also included database set up and administration, client relations, development of MS Office integration modules.</p>
+            </Card>
+          </div>
+        </section>
       </Section>
-      <section>
-        <div className="cards">
-          <Card name="RSA Group" url="https://www.rsagroup.com/" position="Senior Front End Developer" dates="2016 - Present">
-            <p>Working to deliver responsive front end solutions for a variety of use cases, using appropriate technologies (Angular, React, Django CMS). Delivered a new CMS driven brochureware site in <a rel="nofollow" href="https://www.morethan.com">Morethan.com</a>, liaising with the back end and design teams. Another heavy focus on mobile pages with responsive CSS. Ran regular "Dojo" sessions with the team as part of a learning and development program.</p>
-          </Card>
-          <Card name="TUI Group SHG" url="https://www.tuigroup.com/en-en" position="Front End Web Developer" dates="2013 - 2016">
-            <p>Working as part of the Front End development team on <a rel="nofollow" href="https://www.hayesandjarvis.co.uk">Hayes and Jarvis</a> and <a rel="nofollow" href="https://www.citalia.com">Citalia</a> for Specialist Holidays Group (SHG). Coding standards compliant HTML and CSS, based on UX designs and liaising with the back end team for data pull-through from Hybris CMS. Efficient and optimized JavaScript/jQuery code required for progressive enhancement. A heavy focus on mobile pages with responsive CSS.</p>
-          </Card>
-          <Card name="APH" url="https://www.aph.com" position="Web Developer" dates="2010 - 2013">
-            <p>Primarily company facing software development, with a focus on web technologies (SQL, Javascript/JQuery, ASP.Net) and some customer facing web maintenance of the current APH website. In 2012 my team completed the launch of our new creative with no down time and no major errors. </p>
-          </Card>
-          <Card name="Mobius Solutions Ltd" url="https://www.linkedin.com/company-beta/572171/" position="Software Developer" dates="2009 - 2010">
-            <p>Role mainly focusing on new and upcoming web technologies, some desktop development software. Role also included database set up and administration, client relations, development of MS Office integration modules.</p>
-          </Card>
-        </div>
-      </section>
       <Section title="About Me" classes={['aboutMe']}>
       <p>I have an interest in all new technology, especially with regard to new web development areas.</p>
       <p>I'm a big fan of programming with JavaScript and I've been spending a lot of time with <a href="https://facebook.github.io/react/">React</a> recently.</p>

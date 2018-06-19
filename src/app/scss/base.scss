@@ -63,6 +63,10 @@ main {
       flex-basis: 100%;
     }
   }
+
+  > section {
+    flex: 0 0 100%;
+  }
 }
 
 .contact .icon {
