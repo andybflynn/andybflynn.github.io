@@ -4,6 +4,7 @@ import Header from 'components/header';
 import Section from 'components/section';
 import Card from 'components/card';
 import Footer from 'components/footer';
+import Contact from 'components/contact';
 import 'styles/base.scss';
 
 ReactDOM.render(
@@ -14,7 +15,7 @@ ReactDOM.render(
         Hi, I'm Andy. I work as a web developer and a software engineer. I've been programming since around 2005 when I started at The University of Exeter, and have been developing software and websites ever since.
       </p>
       <p>
-        If you're interested in chatting about any of the work I've done previously, please <a data-smooth-scroll data-smooth-scroll-target="#contact" href="#contact">contact me!</a>
+        If you're interested in chatting about any of the work I've done previously, please <a data-scroll href="#contact">contact me!</a>
       </p>
       <Section title="Experience" classes={['experience']}>
         <div>
@@ -78,33 +79,7 @@ ReactDOM.render(
           </Card>
         </div>
       </Section>
-      <Section title="Contact" classes={['contact']}>
-        <p>If you want to get in touch don't hesitate to drop me a line at any of the following:</p>
-        <p>
-          <span className="icon icon-mail" />
-          <a rel="nofollow" href="#">
-            andy@andybflynn.com
-          </a>
-        </p>
-        <p>
-          <span className="icon icon-twitter" />
-          <a rel="nofollow" href="https://twitter.com/andybflynn">
-            Twitter
-          </a>
-        </p>
-        <p>
-          <span className="icon icon-facebook" />
-          <a rel="nofollow" href="https://facebook.com/andybflynn">
-            Facebook
-          </a>
-        </p>
-        <p>
-          <span className="icon icon-linkedin" />
-          <a rel="nofollow" href="https://www.linkedin.com/profile/view?id=51764240">
-            LinkedIn
-          </a>
-        </p>
-      </Section>
+      <Contact />
       <Footer />
     </main>
   </div>

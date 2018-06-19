@@ -5,10 +5,11 @@ const config = {
 	//devtool: 'cheap-eval-source-map',
 	entry: {
 		index: path.resolve(__dirname, 'src/index.js'),
+    fourOhFour: path.resolve(__dirname, 'src/fourOhFour.js'),
 	},
 	output: {
 		path: path.resolve(__dirname, 'dist'),
-		filename: 'output.js',
+		filename: '[name].js',
 	},
 	devServer: {
 		port: 9500,
