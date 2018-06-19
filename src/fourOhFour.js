@@ -8,7 +8,7 @@ import 'styles/base.scss';
 
 ReactDOM.render(
   <div>
-    <Header />
+    <Header is404 />
     <main>
       <Section title="404">
         <p>Whoops! It looks like the page you've requested doesn't exist yet. Why not head back to the <a href="/">homepage</a> and try again?</p>
