@@ -40,6 +40,9 @@ const config = {
 				exclude: /node_modules/,
 				use: {
 					loader: 'file-loader',
+          options: {
+            publicPath: 'dist/',
+          },
 				},
 			},
 		],
