@@ -6,6 +6,7 @@ const config = {
 	entry: {
 		index: path.resolve(__dirname, 'src/index.js'),
     fourOhFour: path.resolve(__dirname, 'src/fourOhFour.js'),
+    utils: path.resolve(__dirname, 'src/app/utils/utils.js'),
 	},
 	output: {
 		path: path.resolve(__dirname, 'dist'),
@@ -55,16 +56,17 @@ const config = {
       // actions: path.resolve(__dirname, 'src/app/actions'),
 		},
 	},
-	plugins: [],
+	plugins: [
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+      },
+    }),
+  ],
 };
 
 module.exports = config;
 
 if (process.env.NODE_ENV === 'production') {
 	module.exports.devtool = false;
-	module.exports.plugins.push(new webpack.DefinePlugin({ // <-- key to reducing React's size
-		'process.env': {
-			'NODE_ENV': JSON.stringify('production'),
-		},
-	}));
 }
