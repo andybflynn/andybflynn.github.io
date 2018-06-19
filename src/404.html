@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <script type="text/javascript" src="dist/64a94de746fbb644a835.js">
+    <script type="text/javascript" src="<%= htmlWebpackPlugin.files.chunks.utils.entry %>">
 
     </script>
-    <title>Andy Flynn Web Developer</title>
+    <title><%= htmlWebpackPlugin.options.title %></title>
     <meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimum-scale=1" />
 
@@ -19,6 +19,6 @@
   </head>
   <body>
     <div id="app"></div>
-    <script type="text/javascript" src="dist/57d3ca70d6bb02f040b5.js"></script>
+    <script type="text/javascript" src="<%= htmlWebpackPlugin.files.chunks.fourOhFour.entry %>"></script>
   </body>
 </html>

@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const config = {
 	devtool: 'cheap-eval-source-map',
@@ -10,7 +11,7 @@ const config = {
 	},
 	output: {
 		path: path.resolve(__dirname, 'dist'),
-		filename: '[name].js',
+		filename: '[chunkhash].js',
 	},
 	devServer: {
 		port: 9500,
@@ -61,6 +62,20 @@ const config = {
       'process.env': {
         'NODE_ENV': JSON.stringify(process.env.NODE_ENV),
       },
+    }),
+    new HtmlWebpackPlugin({
+      title: 'Andy Flynn Web Developer',
+      filename: '../index.html',
+      template: path.resolve(__dirname, 'src/index.html'),
+      chunks: ['index', 'utils'],
+      inject: false,
+    }),
+    new HtmlWebpackPlugin({
+      title: 'Andy Flynn Web Developer',
+      filename: '../404.html',
+      template: path.resolve(__dirname, 'src/404.html'),
+      chunks: ['fourOhFour', 'utils'],
+      inject: false,
     }),
   ],
 };
