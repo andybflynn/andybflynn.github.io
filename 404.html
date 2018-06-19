@@ -1,25 +1,29 @@
-
 <!DOCTYPE html>
-<html class="no-js shortPage fourohfour" lang="en">
-	<head>
+<html lang="en" dir="ltr">
+  <head>
+    <script type="text/javascript">
+      // if protocol is http redirect to https because I can't be dealing with cloudflare's BS right now
+      // if (window.location.protocol === 'http:') {
+      //   window.location = window.location.href.replace('http:', 'https:')
+      // }
+    </script>
+    <meta charset="utf-8">
+    <title>Andy Flynn Web Developer</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimum-scale=1" />
 
-		<link rel="stylesheet" type="text/css" href="/css/foundation/normalize.css" />
-		<link rel="stylesheet" type="text/css" href="/css/foundation/foundation.min.css" />	
-		<link rel="stylesheet" type="text/css" href="/css/main.css" />
-		<script type="text/javascript" src="/scripts/foundation/modernizr.js"></script>
-	    <title>Andy Flynn Web Developer: Something went wrong!</title>
-	</head>
-  	<body>
-  		<div class="headline">
-			<div class="js-hidden overlay noShadow alert">
-			    <p>You currently have Javascript turned off, or something went wrong when loading the Javascript. If you think something went wrong, press F5 to reload the page.</p>
-			</div>
-			<div class="container mainsplash">
-				<div class="logo"><span>AbF</span></div>
-				<h1>404 page not found</h1>	
-				<p>Whoops! It looks like the page you've requested doesn't exist yet. Why not head back to the <a href="/">homepage</a> and try again?</p>
-			</div>
-		</div>
-	</body>
+    <!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-TZC8D4');</script>
+		<!-- End Google Tag Manager -->
+
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="text/javascript" src="dist/fourOhFour.js">
+
+    </script>
+  </body>
 </html>

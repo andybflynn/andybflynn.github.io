@@ -1,0 +1,19 @@
+@import './variables';
+
+.section {
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+
+  header {
+    color: white;
+    background-color: $baseFontColor;
+    padding: .5rem;
+    width: 105%;
+    margin-left: -5%;
+    padding-left: 5%;
+
+    h3 {
+      margin: 0;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+@import './variables';
+
+.card {
+  background-color: white;
+  border: $highlightBorder;
+  box-shadow: -3px 3px 3px 0px #ccc;
+  box-sizing: border-box;
+  flex: 0 1 calc(50% - 3rem);
+  padding: 1rem 2rem;
+  margin: 1rem 1.5rem;
+
+  @media (max-width: 480px) {
+    flex-basis: 100%;
+  }
+
+  .card__jobtitle, h3, .card__jobtime {
+    text-align: center;
+  }
+
+  .card__jobtitle {
+    font-weight: bold;
+  }
+
+  .card__jobtime {
+    display: block;
+    font-weight: normal;
+  }
+}
