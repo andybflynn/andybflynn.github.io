@@ -1,13 +1,8 @@
 @import './variables';
+@import './placeholders';
 
 .card {
-  background-color: white;
-  border: $highlightBorder;
-  box-shadow: -3px 3px 3px 0px #ccc;
-  box-sizing: border-box;
-  flex: 0 1 calc(50% - 3rem);
-  padding: 1rem 2rem;
-  margin: 1rem 1.5rem;
+  @extend %card;
 
   @media (max-width: 480px) {
     flex-basis: 100%;
