@@ -1,0 +1,26 @@
+@import './variables';
+
+.section {
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+
+  &:hover, &:focus {
+    header {
+      background-color: $linkHoverColor;
+    }
+  }
+
+  header {
+    color: white;
+    background-color: $baseFontColor;
+    padding: .5rem;
+    width: 105%;
+    margin-left: -5%;
+    padding-left: 5%;
+    transition: background-color .4s;
+
+    h3 {
+      margin: 0;
+    }
+  }
+}
