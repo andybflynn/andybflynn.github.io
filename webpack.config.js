@@ -87,7 +87,7 @@ const config = {
         description: 'The personal website of Andy Flynn, web developer',
         background_color: '#fff',
         theme_color: '#b4222a',
-        start_url: '../index.html',
+        start_url: '../.',
       },
     }),
   ],
