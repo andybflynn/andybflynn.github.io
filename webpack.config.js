@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ManifestPlugin = require('webpack-manifest-plugin');
 
 const config = {
 	devtool: 'cheap-eval-source-map',
@@ -76,6 +77,18 @@ const config = {
       template: path.resolve(__dirname, 'src/404.html'),
       chunks: ['fourOhFour', 'utils'],
       inject: false,
+    }),
+    new ManifestPlugin({
+      seed: {
+        dir: 'ltr',
+        lang: 'en',
+        name: 'AndyBFlynn',
+        short_name: 'AndyBFlynn',
+        description: 'The personal website of Andy Flynn, web developer',
+        background_color: '#fff',
+        theme_color: '#b4222a',
+        start_url: '../index.html',
+      },
     }),
   ],
 };

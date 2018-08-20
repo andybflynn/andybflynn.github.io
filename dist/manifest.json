@@ -1,0 +1,21 @@
+{
+  "dir": "ltr",
+  "lang": "en",
+  "name": "AndyBFlynn",
+  "short_name": "AndyBFlynn",
+  "description": "The personal website of Andy Flynn, web developer",
+  "background_color": "#fff",
+  "theme_color": "#b4222a",
+  "start_url": "../index.html",
+  "index.js": "065a575eec9c5d886363.js",
+  "fourOhFour.js": "8f3d80a273829abf7382.js",
+  "utils.js": "7ded3603db4e37332546.js",
+  "lightpaperfibers.png": "498f5053b968f00f2b1919224ccea4fc.png",
+  "andykanji.png": "95d0b2f44b6edf8ac270e324f7bd6ab7.png",
+  "icomoon.woff?ud3og6": "b344fe005e5b9e305a4845e6a66a4fb7.woff",
+  "icomoon.ttf?ud3og6": "03c84dccdb623c36599d045c2821e26b.ttf",
+  "icomoon.svg?ud3og6": "a047c9931cea91adf2654f81920997fe.svg",
+  "icomoon.eot": "f557877b5f20718542ff57426a040df5.eot",
+  "../index.html": "../index.html",
+  "../404.html": "../404.html"
+}
