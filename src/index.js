@@ -46,8 +46,8 @@ ReactDOM.render(
         </div>
         <section>
           <div className="cards">
-            <Card name="RSA Group" url="https://www.rsagroup.com/" position="Senior Front End Developer" dates="2016 - Present">
-              <p>Working to deliver responsive front end solutions for a variety of use cases, using appropriate technologies (Angular, React, Django CMS). Delivered a new CMS driven brochureware site in <a rel="nofollow" href="https://www.morethan.com">Morethan.com</a>, liaising with the back end and design teams. Another heavy focus on mobile pages with responsive CSS. Ran regular "Dojo" sessions with the team as part of a learning and development program.</p>
+            <Card name="RSA Group" url="https://www.rsagroup.com/" position="Front End Team Lead / Senior Front End Developer" dates="2016 - Present">
+              <p>Leading my team to deliver responsive front end solutions for a variety of use cases, using appropriate technologies (Angular, React, Django CMS). Delivered a new CMS driven brochureware site in <a rel="nofollow" href="https://www.morethan.com">Morethan.com</a>, and spearheaded functional, performant component driven design with React.js and webpack. Ran regular "Dojo" sessions with the team as part of a learning and development program.</p>
             </Card>
             <Card name="TUI Group SHG" url="https://www.tuigroup.com/en-en" position="Front End Web Developer" dates="2013 - 2016">
               <p>Working as part of the Front End development team on <a rel="nofollow" href="https://www.hayesandjarvis.co.uk">Hayes and Jarvis</a> and <a rel="nofollow" href="https://www.citalia.com">Citalia</a> for Specialist Holidays Group (SHG). Coding standards compliant HTML and CSS, based on UX designs and liaising with the back end team for data pull-through from Hybris CMS. Efficient and optimized JavaScript/jQuery code required for progressive enhancement. A heavy focus on mobile pages with responsive CSS.</p>
