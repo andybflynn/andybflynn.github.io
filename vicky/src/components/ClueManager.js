@@ -35,7 +35,7 @@ class ClueManager extends React.Component {
   render() {
     return (
       <div className="clue-manager">
-        <ClueHistory cluesToShow={this.props.clues.slice(this.state.currentClue-1, this.state.currentClue)} />
+        <ClueHistory cluesToShow={this.props.clues.slice(this.state.currentClue-1, this.state.currentClue)} isFinal={this.state.currentClue === this.props.clues.length} />
         <ClueResolver nextClue={this.props.clues.slice(this.state.currentClue, this.state.currentClue+1)[0]} onAnswerCorrect={this.nextClue}/>
       </div>
     )
