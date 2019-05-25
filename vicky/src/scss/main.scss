@@ -19,6 +19,31 @@ input {
   max-width: 60%;
 }
 
+button {
+  background: #890620;
+  color: white;
+  border-radius: 5px;
+  margin-left: 10px;
+  outline: none;
+  border: 0;
+  padding: 10px;
+  font-size: calc(10px + 1vw);
+  position: relative;
+  top: -2px;
+
+  transition: background 0.2s ease-out;
+
+  &:active {
+    background: darken(#890620, 6%);
+  }
+
+  &:disabled {
+    background: #EBD4CB;
+    color: #6c0519;
+    filter: grayscale(.5);
+  }
+}
+
 .rainbow, .unicorn {
   width: 20vw;
   position: absolute;
@@ -29,24 +54,6 @@ input {
   right: 0;
   bottom: 0;
   top: auto;
-}
-
-button {
-  background: #890620;
-  color: white;
-  border-radius: 5px;
-  margin-left: 10px;
-  outline: none;
-  border: 0;
-
-  &:active {
-    background: darken(#890620, 6%);
-  }
-
-  &:disabled {
-    background: #ccc;
-    color: #888;
-  }
 }
 
 .clue-manager {
