@@ -1,0 +1,73 @@
+$font-size: calc(18px + 1vw);
+$bigger-font: calc(21px + 1vw);
+$smaller-font: calc(14px + 1vw);
+
+body {
+  background: #ee9ca7;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ffdde1, #ee9ca7);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ffdde1, #ee9ca7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  font-size: $font-size;
+  color: #890620;
+}
+
+input, button {
+  font-size: $font-size;
+}
+
+input {
+  max-width: 60%;
+}
+
+.rainbow, .unicorn {
+  width: 20vw;
+  position: absolute;
+  top: 0;
+}
+
+.unicorn {
+  right: 0;
+  bottom: 0;
+  top: auto;
+}
+
+button {
+  background: #890620;
+  color: white;
+  border-radius: 5px;
+  margin-left: 10px;
+  outline: none;
+  border: 0;
+
+  &:active {
+    background: darken(#890620, 6%);
+  }
+
+  &:disabled {
+    background: #ccc;
+    color: #888;
+  }
+}
+
+.clue-manager {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100vw;
+  text-align: center;
+}
+
+.clue {
+  font-weight: bold;
+  font-size: $bigger-font;
+}
+
+.incorrect {
+  margin-top: 10px;
+  font-size: $smaller-font;
+}
+
+.clue-resolver {
+  margin-top: 1em;
+}
