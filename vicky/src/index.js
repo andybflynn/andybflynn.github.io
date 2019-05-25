@@ -16,7 +16,7 @@ const clues = [
     output: '3675'
   },
   {
-    input: 'bunny',
+    input: 'vicky',
     output: '891 (Happy Birthday!)'
   }
 ]
