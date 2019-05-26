@@ -9,6 +9,7 @@ body {
 
   font-size: $font-size;
   color: #890620;
+  overflow: hidden;
 }
 
 input, button {
@@ -48,12 +49,17 @@ button {
   width: 20vw;
   position: absolute;
   top: 0;
+  min-width: 170px;
 }
 
 .unicorn {
   right: 0;
   bottom: 0;
   top: auto;
+  &:focus {
+    outline: 0;
+    animation: run 2.4s ease;
+  }
 }
 
 .clue-manager {
@@ -77,4 +83,25 @@ button {
 
 .clue-resolver {
   margin-top: 1em;
+}
+
+@keyframes run {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  10% {
+    transform: rotateZ(15deg);
+  }
+  15% {
+    transform: rotateZ(5deg) translateX(-1vw);
+  }
+  65% {
+    transform: rotateZ(5deg) translateX(-150vw);
+  }
+  66% {
+    transform: rotateZ(0deg) translateX(100vw);
+  }
+  100% {
+    transform: rotateZ(0deg) translateX(0);
+  }
 }

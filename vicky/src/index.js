@@ -24,7 +24,7 @@ const clues = [
 ReactDOM.render(
   <div>
     <img className="rainbow" src={rainbow} />
-    <img className="unicorn" src={unicorn} />
+    <img className="unicorn" src={unicorn} tabindex="0" />
     <ClueManager clues={clues} />
   </div>
   , document.getElementById('app')
