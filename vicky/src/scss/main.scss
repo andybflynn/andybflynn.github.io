@@ -95,11 +95,20 @@ button {
   15% {
     transform: rotateZ(5deg) translateX(-1vw);
   }
+  64% {
+    transform: rotateZ(5deg) translateX(-150vw);
+    opacity: 1;
+  }
   65% {
     transform: rotateZ(5deg) translateX(-150vw);
+    opacity: 0;
   }
   66% {
     transform: rotateZ(0deg) translateX(100vw);
+  }
+  67% {
+    opacity: 1;
+    transform: rotateZ(0deg) translateX(99vw);
   }
   100% {
     transform: rotateZ(0deg) translateX(0);
