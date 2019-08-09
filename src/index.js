@@ -63,6 +63,7 @@ ReactDOM.render(
       <Section title="Portfolio" classes={['portfolio']}>
         <h4>Calculator</h4>
         <p>Using React, Styled Components and Parcel to build a basic calculator with keyboard support. Play with the calculator below to see it in action. Keyboard events work when focussed. Hold shift+C to clear all.</p>
+        <p>Check out the source code at <a href="https://github.com/andybflynn/Calculator">https://github.com/andybflynn/Calculator</a></p>
         <iframe className="calculator-frame" src="https://andybflynn.github.io/portfolio/calculator/"></iframe>
       </Section>
       <Section title="About Me" classes={['aboutMe']}>
