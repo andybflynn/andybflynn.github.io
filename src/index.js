@@ -83,7 +83,7 @@ ReactDOM.render(
         </div>
       </Section>
       <Contact />
-      <Footer />
     </main>
+    <Footer />
   </div>
 , document.getElementById('app'));
