@@ -6,6 +6,7 @@ import Card from 'components/card';
 import Footer from 'components/footer';
 import Contact from 'components/contact';
 import 'styles/base.scss';
+import 'styles/portfolio.scss';
 
 ReactDOM.render(
   <div>
@@ -21,27 +22,25 @@ ReactDOM.render(
         <div>
           <h4>I'm great at these:</h4>
           <ul>
-              <li>JavaScript + jQuery</li>
+              <li>JavaScript ES6</li>
               <li>React/Redux</li>
-              <li>Angular JS</li>
               <li>CSS/SCSS</li>
               <li>Responsive design (Bootstrap/Foundation)</li>
               <li>Optimising for mobile performance</li>
               <li>Gulp/Webpack</li>
               <li><a href="https://xkcd.com/208/">Regular Expressions</a></li>
-              <li>Git</li>
-              <li>Agile methodologies (Scrum/Kanban)</li>
+              <li>Git</li>              
           </ul>
         </div>
         <div>
-          <h4>I'm still working on these:</h4>
+          <h4>I'm also proficient at:</h4>
           <ul>
             <li>Node JS</li>
             <li>Express</li>
-            <li>Vue JS</li>
-            <li>Angular 2+</li>
-            <li>SQL</li>
-            <li>Python</li>
+            <li>Setting up build pipelines</li>
+            <li>JIRA/Confluence/Bitbucket</li>
+            <li>Technical arcitecture</li>
+            <li>Agile methodologies (Scrum/Kanban)</li>
           </ul>
         </div>
         <section>
@@ -61,12 +60,16 @@ ReactDOM.render(
           </div>
         </section>
       </Section>
+      <Section title="Portfolio" classes={['portfolio']}>
+        <h4>Calculator</h4>
+        <p>Using React, Styled Components and Parcel to build a basic calculator with keyboard support. Play with the calculator below to see it in action. Keyboard events work when focussed. Hold shift+C to clear all.</p>
+        <iframe className="calculator-frame" src="https://andybflynn.github.io/portfolio/calculator/"></iframe>
+      </Section>
       <Section title="About Me" classes={['aboutMe']}>
       <p>I have an interest in all new technology, especially with regard to new web development areas.</p>
-      <p>I'm a big fan of programming with JavaScript and I've been spending a lot of time with <a href="https://facebook.github.io/react/">React</a> recently.</p>
-      <p>I've also recently started teaching myself the <a href="https://nodejs.org/">nodejs</a> framework, a fantastically simple way to get a back end up and running in a language that I'm immensely familiar with.
-          Although I cut my teeth on VB.Net, I feel like it's time to embrace the future, and nodejs might just be the way to do that!
-      </p>
+      <p>I specialise in programming with JavaScript and I've been spending a lot of time with <a href="https://facebook.github.io/react/">React</a> recently.</p>
+      <p>I've also recently revisited the <a href="https://nodejs.org/">nodejs</a> framework, a fantastically simple way to get a back end up and running in a language that I'm immensely familiar with.</p>
+      <p>In my time at RSA I have been involved in project arcitecture, set up a forum for technical governance, implemented a component library and design system with my UI/UX colleagues and have also helped my team set up efficient build pipelines for development.</p>
       <p>In addition to this, I'm also fully agile! I value getting things done quickly and iteratively, and focusing on delivery over comprehensive documentation. I can work to sprint deadlines, prioritise like a champ, and have honed my team stand-up speaking voice.</p>
       </Section>
       <Section title="Education">
