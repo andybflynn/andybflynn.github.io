@@ -62,7 +62,7 @@ ReactDOM.render(
       </Section>
       <Section title="Portfolio" classes={['portfolio']}>
         <h4>Calculator</h4>
-        <p>A basic calculator with keyboard support. Built using <a href="https://www.react-spring.io/" rel="nofollow">React Spring</a> for animations, <a href="https://www.styled-components.com/" rel="nofollow">Styled Components</a>, and built with <a href="https://parceljs.org" rel="nofollow">Parcel</a>. Play with the calculator below to see it in action. Keyboard events work when focussed. Hold shift+C to clear all.</p>
+        <p>A basic calculator with keyboard support. Made with React hooks, <a href="https://www.react-spring.io/" rel="nofollow">React Spring</a> for animations, <a href="https://www.styled-components.com/" rel="nofollow">Styled Components</a>, and built with <a href="https://parceljs.org" rel="nofollow">Parcel</a>. Play with the calculator below to see it in action. Keyboard events work when focussed. Hold shift+C to clear all.</p>
         <p>Check out the source code at <a href="https://github.com/andybflynn/Calculator">https://github.com/andybflynn/Calculator</a></p>
         <iframe className="calculator-frame" src="https://andybflynn.github.io/portfolio/calculator/"></iframe>
       </Section>
