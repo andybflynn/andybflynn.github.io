@@ -35,8 +35,8 @@ ReactDOM.render(
         <div>
           <h4>I'm also proficient at:</h4>
           <ul>
-            <li>Node JS</li>
-            <li>Express</li>
+            <li>Node JS/Express</li>
+            <li>Vue JS</li>
             <li>Setting up build pipelines</li>
             <li>JIRA/Confluence/Bitbucket</li>
             <li>Technical arcitecture</li>
