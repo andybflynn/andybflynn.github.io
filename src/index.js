@@ -18,6 +18,7 @@ ReactDOM.render(
       <p>
         If you're interested in chatting about any of the work I've done previously, please <a data-scroll href="#contact">contact me!</a>
       </p>
+      <p>If you'd like to try something a little different, try running <pre>npx @andybflynn/resume</pre> in your terminal for an interactive CLI version of this document.</p>
       <Section title="Experience" classes={['experience']}>
         <div>
           <h4>I'm great at these:</h4>
