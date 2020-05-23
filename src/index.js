@@ -25,10 +25,10 @@ ReactDOM.render(
           <ul>
               <li>JavaScript ES6</li>
               <li>React/Redux</li>
+              <li>Vue JS</li>
               <li>CSS/SCSS</li>
               <li>Responsive design (Bootstrap/Foundation)</li>
-              <li>Optimising for mobile performance</li>
-              <li>Gulp/Webpack</li>
+              <li>Optimising for mobile performance</li>              
               <li><a href="https://xkcd.com/208/">Regular Expressions</a></li>
               <li>Git</li>              
           </ul>
@@ -37,7 +37,7 @@ ReactDOM.render(
           <h4>I'm also proficient at:</h4>
           <ul>
             <li>Node JS/Express</li>
-            <li>Vue JS</li>
+            <li>Gulp/Webpack</li>
             <li>Setting up build pipelines</li>
             <li>JIRA/Confluence/Bitbucket</li>
             <li>Technical arcitecture</li>
@@ -46,7 +46,10 @@ ReactDOM.render(
         </div>
         <section>
           <div className="cards">
-            <Card name="RSA Group" url="https://www.rsagroup.com/" position="Front End Team Lead / Senior Front End Developer" dates="2016 - Present">
+            <Card name="Bought By Many" url="https://boughtbymany.com/" position="Senior Front End Developer" dates="2019 - Present">
+              <p>Senior front end developer for the UK's fastest growing insurtech business. Working primarily with Vue to deliver performant, dynamic user journeys for both internal and external users. Using a mixture of technologies and services in AWS, Heroku, and Netlify. Working in a kanban-like agile environment to deliver appropriate value to the business and our customers.</p>
+            </Card>
+            <Card name="RSA Group" url="https://www.rsagroup.com/" position="Front End Team Lead / Senior Front End Developer" dates="2016 - 2019">
               <p>Leading my team to deliver responsive front end solutions for a variety of use cases, using appropriate technologies (Angular, React, Django CMS). Delivered a new CMS driven brochureware site in <a rel="nofollow" href="https://www.morethan.com">Morethan.com</a>, and spearheaded functional, efficient and reusable component driven design with React.js and webpack. Ran regular "Dojo" sessions with the team as part of a learning and development program.</p>
             </Card>
             <Card name="TUI Group SHG" url="https://www.tuigroup.com/en-en" position="Front End Web Developer" dates="2013 - 2016">
@@ -54,9 +57,6 @@ ReactDOM.render(
             </Card>
             <Card name="APH" url="https://www.aph.com" position="Web Developer" dates="2010 - 2013">
               <p>Primarily company facing software development, with a focus on web technologies (SQL, Javascript/JQuery, ASP.Net) and some customer facing web maintenance of the current APH website. In 2012 my team completed the launch of our new creative with no down time and no major errors. </p>
-            </Card>
-            <Card name="Mobius Solutions Ltd" url="https://www.linkedin.com/company-beta/572171/" position="Software Developer" dates="2009 - 2010">
-              <p>Role mainly focusing on new and upcoming web technologies, some desktop development software. Role also included database set up and administration, client relations, development of MS Office integration modules.</p>
             </Card>
           </div>
         </section>
