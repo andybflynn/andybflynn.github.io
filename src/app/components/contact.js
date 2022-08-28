@@ -18,12 +18,6 @@ export default function Contact() {
         </a>
       </p>
       <p>
-        <span className="icon icon-facebook" />
-        <a rel="nofollow" href="https://facebook.com/andybflynn">
-          Facebook
-        </a>
-      </p>
-      <p>
         <span className="icon icon-linkedin" />
         <a rel="nofollow" href="https://www.linkedin.com/profile/view?id=51764240">
           LinkedIn

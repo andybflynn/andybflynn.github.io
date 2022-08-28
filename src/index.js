@@ -24,10 +24,10 @@ ReactDOM.render(
           <h4>I'm great at these:</h4>
           <ul>
               <li>JavaScript ES6</li>
-              <li>React/Redux</li>
               <li>Vue JS</li>
+              <li>Vuex and Vue Router</li>
               <li>CSS/SCSS</li>
-              <li>Responsive design (Bootstrap/Foundation)</li>
+              <li>Responsive design (Bulma/Bootstrap/Foundation)</li>
               <li>Optimising for mobile performance</li>              
               <li><a href="https://xkcd.com/208/">Regular Expressions</a></li>
               <li>Git</li>              
@@ -37,7 +37,7 @@ ReactDOM.render(
           <h4>I'm also proficient at:</h4>
           <ul>
             <li>Node JS/Express</li>
-            <li>Gulp/Webpack</li>
+            <li>Typescript</li>
             <li>Setting up build pipelines</li>
             <li>JIRA/Confluence/Bitbucket</li>
             <li>Technical arcitecture</li>
@@ -46,8 +46,8 @@ ReactDOM.render(
         </div>
         <section>
           <div className="cards">
-            <Card name="Bought By Many" url="https://boughtbymany.com/" position="Senior Front End Developer" dates="2019 - Present">
-              <p>Senior front end developer for the UK's fastest growing insurtech business. Working primarily with Vue to deliver performant, dynamic user journeys for both internal and external users. Using a mixture of technologies and services in AWS, Heroku, and Netlify. Working in a kanban-like agile environment to deliver appropriate value to the business and our customers.</p>
+            <Card name="ManyPets" url="https://manypets.com/" position="Senior Javascript Developer" dates="2019 - Present">
+              <p>Senior Javascript developer for the UK's fastest growing insurtech business. Working primarily with Vue to deliver performant, dynamic user journeys for both internal and external users. Using a mixture of technologies and services in AWS, Heroku, and Netlify. Working in a kanban-like agile environment to deliver appropriate value to the business and our customers.</p>
             </Card>
             <Card name="RSA Group" url="https://www.rsagroup.com/" position="Front End Team Lead / Senior Front End Developer" dates="2016 - 2019">
               <p>Leading my team to deliver responsive front end solutions for a variety of use cases, using appropriate technologies (Angular, React, Django CMS). Delivered a new CMS driven brochureware site in <a rel="nofollow" href="https://www.morethan.com">Morethan.com</a>, and spearheaded functional, efficient and reusable component driven design with React.js and webpack. Ran regular "Dojo" sessions with the team as part of a learning and development program.</p>
@@ -69,9 +69,9 @@ ReactDOM.render(
       </Section>
       <Section title="About Me" classes={['aboutMe']}>
       <p>I have an interest in all new technology, especially with regard to new web development areas.</p>
-      <p>I specialise in programming with JavaScript and I've been spending a lot of time with <a href="https://facebook.github.io/react/">React</a> recently.</p>
+      <p>I specialise in programming with JavaScript and I've been spending a lot of time with Vue and Typescript recently.</p>
       <p>I've also recently revisited the <a href="https://nodejs.org/">nodejs</a> framework, a fantastically simple way to get a back end up and running in a language that I'm immensely familiar with.</p>
-      <p>In my time at RSA I have been involved in project arcitecture, set up a forum for technical governance, implemented a component library and design system with my UI/UX colleagues and have also helped my team set up efficient build pipelines for development.</p>
+      <p>In my time at ManyPets I have been involved in project arcitecture, worked with our quality, release and accessbility councils, helped implement a component library and design system with my UI/UX colleagues and have also helped my team set up efficient build pipelines for development.</p>
       <p>In addition to this, I'm also fully agile! I value getting things done quickly and iteratively, and focusing on delivery over comprehensive documentation. I can work to sprint deadlines, prioritise like a champ, and have honed my team stand-up speaking voice.</p>
       </Section>
       <Section title="Education">
