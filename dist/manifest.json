@@ -7,41 +7,41 @@
     "file": "assets/icomoon.27ce774c.svg",
     "src": "src/assets/fonts/icomoon.svg"
   },
-  "src/index.html": {
-    "file": "assets/site.ecf0c7ee.js",
-    "src": "src/index.html",
+  "index.html": {
+    "file": "assets/site.9b9be434.js",
+    "src": "index.html",
     "isEntry": true,
     "imports": [
-      "_base.f66e7e29.js"
+      "_base.b90a856e.js"
     ],
     "css": [
       "assets/index.cab960fe.css"
     ]
   },
-  "src/404.html": {
-    "file": "assets/site404.a64e38f0.js",
-    "src": "src/404.html",
+  "404.html": {
+    "file": "assets/site404.6233e436.js",
+    "src": "404.html",
     "isEntry": true,
     "imports": [
-      "_base.f66e7e29.js"
+      "_base.b90a856e.js"
     ]
   },
-  "_base.f66e7e29.js": {
-    "file": "assets/base.f66e7e29.js",
+  "_base.b90a856e.js": {
+    "file": "assets/base.b90a856e.js",
     "css": [
-      "assets/base.c32a2475.css"
+      "assets/base.4ead081d.css"
     ],
     "assets": [
       "assets/icomoon.27ce774c.svg",
       "assets/lightpaperfibers.7273f993.jpg"
     ]
   },
-  "src/index.css": {
+  "index.css": {
     "file": "assets/index.cab960fe.css",
-    "src": "src/index.css"
+    "src": "index.css"
   },
   "base.css": {
-    "file": "assets/base.c32a2475.css",
+    "file": "assets/base.4ead081d.css",
     "src": "base.css"
   }
 }

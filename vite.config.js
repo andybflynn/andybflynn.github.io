@@ -15,8 +15,8 @@ export default defineConfig({
     manifest: true,
     rollupOptions: {
       input: {
-        site: "./src/index.html",
-        site404: "./src/404.html",
+        site: "./index.html",
+        site404: "./404.html",
       },
     },
   },
