@@ -19,5 +19,6 @@ export default defineConfig({
         site404: "./404.html",
       },
     },
+    outDir: "./docs",
   },
 });
