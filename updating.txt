@@ -1,0 +1,1 @@
+When updating from work laptop - log in to github, go to profile, settings, developer settings, personal access token, regenerate token for work laptop. Then use that token as the password when pushing.
