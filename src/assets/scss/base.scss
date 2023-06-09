@@ -2,25 +2,60 @@
 @import './variables';
 @import './fonts';
 
+:root {
+  --dark-mode-text-color: #f0f0f0;
+  --light-mode-text-color: #444;
+  --light-mode-link-hover-color: #b4222a;
+  --dark-mode-link-hover-color: #bc383f;
+}
+
 html {
   font-size: 10px;
   font-family: roboto;
 }
 
 body {
-  background-image: url('../img/lightpaperfibers.jpg');
-  color: $baseFontColor;
+  margin: 0;
+}
+
+#body.light {
+  --text-color: var(--light-mode-text-color);
+  --link-hover-color: var(--light-mode-link-hover-color);
+}
+
+#body.dark {
+  --text-color: var(--dark-mode-text-color);
+  --link-hover-color: var(--dark-mode-link-hover-color);
+}
+
+#body {
+  background-color: #222; 
+  color: var(--text-color);
   margin: 0;
   overflow-x: hidden;
+  position: relative;
+  &::before {
+    content: '';
+    background-image: url('../img/lightpaperfibers.jpg');
+    position: absolute;
+    inset: 0px;
+    z-index: 0;
+  }
+  &.light::before {
+    opacity: 1;
+  }
+  &.dark::before {
+    opacity: .25;
+  }
 }
 
 a {
-  color: $baseFontColor;
+  color: var(--text-color);
   &:visited, &:active {
-    color: $baseFontColor;
+    color: var(--text-color);
   }
   &:hover {
-    color: $linkHoverColor;
+    color: var(--link-hover-color);
     text-decoration: none;
   }
 }
@@ -44,6 +79,10 @@ h4 {
 p, li {
   font-size: 1.6rem;
   line-height: 3rem;
+  &.small {
+    font-size: 1.4rem;
+  line-height: 2.6rem;
+  }
 }
 
 main {
@@ -84,8 +123,9 @@ main {
 
 pre {
   display: inline;
-  padding: 0 .5em;
+  padding: 0 .2em;
   background-color: #ccc;
   border-radius: 4px;
   color: #222;
+  margin: 0 .2em;
 }

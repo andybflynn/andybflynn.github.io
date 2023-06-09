@@ -22,13 +22,16 @@
 <style lang="scss" scoped>
 @import "@/assets/scss/variables";
 footer {
-  color: lighten($baseFontColor, 25%);
   font-style: italic;
   text-align: center;
+  padding-bottom: 1em;
 
   p {
     font-size: 1.2rem;
     line-height: 1.2rem;
+    &:last-child() {
+      margin-bottom: 0;
+    }
   }
 }
 </style>

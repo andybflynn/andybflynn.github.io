@@ -1,9 +1,16 @@
 @import './variables';
 
 %card {
-  background-color: white;
-  border: $highlightBorder;
-  box-shadow: -3px 3px 3px 0px #ccc;
+  #body.light & {
+    background-color: white;
+    box-shadow: -3px 3px 3px 0px #ccc;
+    border: $highlightBorder;
+  }
+  #body.dark & {
+    background-color: #444;
+    border: 2px solid #222;
+    box-shadow: -3px 3px 3px 0px #161616;
+  }
   box-sizing: border-box;
   flex: 0 1 calc(50% - 3rem);
   padding: 1rem 2rem;

@@ -34,7 +34,8 @@ defineProps({
   margin-bottom: 5rem;
 
   &:hover,
-  &:focus {
+  &:focus,
+  &:focus-within {
     header {
       background-color: $linkHoverColor;
     }
