@@ -8,14 +8,14 @@
     "src": "src/assets/fonts/icomoon.svg"
   },
   "index.html": {
-    "file": "assets/site.bc697111.js",
+    "file": "assets/site.69120b79.js",
     "src": "index.html",
     "isEntry": true,
     "imports": [
       "_base.f8fec6d2.js"
     ],
     "css": [
-      "assets/index.2c1103de.css"
+      "assets/index.65bcd274.css"
     ]
   },
   "404.html": {
@@ -37,7 +37,7 @@
     ]
   },
   "index.css": {
-    "file": "assets/index.2c1103de.css",
+    "file": "assets/index.65bcd274.css",
     "src": "index.css"
   },
   "base.css": {
