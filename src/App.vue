@@ -62,8 +62,11 @@ const updateDarkMode = (newVal) => {
           </div>
           <section>
             <div class="cards">
-              <SiteCard name="ManyPets" url="https://manypets.com/" position="Senior Javascript Developer" dates="2019 - Present">
-                <p>Senior Javascript developer for the UK's fastest growing insurtech business. Working primarily with Vue to deliver performant, dynamic user journeys for both internal and external users. Using a mixture of technologies and services in AWS, Heroku, and Netlify. Working in a kanban-like agile environment to deliver appropriate value to the business and our customers.</p>
+              <SiteCard name="ManyPets" url="https://manypets.com/" position="Associate Engineering Manager" dates="2023 - Present">
+                <p>Continuing my tenure at ManyPets, I now lead developers across multiple high performance teams. I lead by example, provide opportunities for growth and development, but most importantly I get out of their way and let them do what they're best at.</p>
+              </SiteCard>
+              <SiteCard name="ManyPets" url="https://manypets.com/" position="Senior Javascript Developer" dates="2019 - 2023">
+                <p>Senior Javascript developer for the UK's fastest growing insuretech business. Working primarily with Vue to deliver performant, dynamic user journeys for both internal and external users. Using a mixture of technologies and services in AWS, Heroku, and Netlify. Working in a kanban-like agile environment to deliver appropriate value to the business and our customers.</p>
               </SiteCard>
               <SiteCard name="RSA Group" url="https://www.rsagroup.com/" position="Front End Team Lead / Senior Front End Developer" dates="2016 - 2019">
                 <p>Leading my team to deliver responsive front end solutions for a variety of use cases, using appropriate technologies (Angular, React, Django CMS). Delivered a new CMS driven brochureware site in <a rel="nofollow" href="https://www.morethan.com">Morethan.com</a>, and spearheaded functional, efficient and reusable component driven design with React.js and webpack. Ran regular "Dojo" sessions with the team as part of a learning and development program.</p>

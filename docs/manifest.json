@@ -8,28 +8,28 @@
     "src": "src/assets/fonts/icomoon.svg"
   },
   "index.html": {
-    "file": "assets/site.7889b725.js",
+    "file": "assets/site.bc697111.js",
     "src": "index.html",
     "isEntry": true,
     "imports": [
-      "_base.15954398.js"
+      "_base.f8fec6d2.js"
     ],
     "css": [
-      "assets/index.e38bebcf.css"
+      "assets/index.2c1103de.css"
     ]
   },
   "404.html": {
-    "file": "assets/site404.846efc0a.js",
+    "file": "assets/site404.35c4ff25.js",
     "src": "404.html",
     "isEntry": true,
     "imports": [
-      "_base.15954398.js"
+      "_base.f8fec6d2.js"
     ]
   },
-  "_base.15954398.js": {
-    "file": "assets/base.15954398.js",
+  "_base.f8fec6d2.js": {
+    "file": "assets/base.f8fec6d2.js",
     "css": [
-      "assets/base.6f2cef21.css"
+      "assets/base.f0c641ab.css"
     ],
     "assets": [
       "assets/icomoon.27ce774c.svg",
@@ -37,11 +37,11 @@
     ]
   },
   "index.css": {
-    "file": "assets/index.e38bebcf.css",
+    "file": "assets/index.2c1103de.css",
     "src": "index.css"
   },
   "base.css": {
-    "file": "assets/base.6f2cef21.css",
+    "file": "assets/base.f0c641ab.css",
     "src": "base.css"
   }
 }
