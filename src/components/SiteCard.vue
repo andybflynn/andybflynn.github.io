@@ -21,9 +21,9 @@ defineProps({
 
 <template>
   <div class="card">
-    <h3>
+    <h4 class="h3">
       <a rel="nofollow" :href="url">{{ name }}</a>
-    </h3>
+    </h4>
     <p class="card__jobtitle">
       {{ position }} <span className="card__jobtime">{{ dates }}</span>
     </p>
@@ -43,7 +43,7 @@ defineProps({
   }
 
   &__jobtitle,
-  h3,
+  h4,
   &__jobtime {
     text-align: center;
   }

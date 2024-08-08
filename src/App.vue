@@ -36,7 +36,7 @@ const updateDarkMode = (newVal) => {
         </p>
         <SiteSection title="Experience" :classes="['experience']">
           <div>
-            <h4>I'm great at these:</h4>
+            <h3>I'm great at these:</h3>
             <ul>
                 <li>JavaScript ES6</li>
                 <li>Vue JS</li>
@@ -49,7 +49,7 @@ const updateDarkMode = (newVal) => {
             </ul>
           </div>
           <div>
-            <h4>I'm also proficient at:</h4>
+            <h3>I'm also proficient at:</h3>
             <ul>
               <li>Node JS/Express</li>
               <li>Typescript</li>
@@ -80,7 +80,7 @@ const updateDarkMode = (newVal) => {
           </section>
         </SiteSection>
         <SiteSection title="Portfolio" :classes="['portfolio']">
-          <h4>Calculator</h4>
+          <h3>Calculator</h3>
           <p>A basic calculator with keyboard support. Made with React hooks, <a href="https://www.react-spring.io/" rel="nofollow">React Spring</a> for animations, <a href="https://www.styled-components.com/" rel="nofollow">Styled Components</a>, and built with <a href="https://parceljs.org" rel="nofollow">Parcel</a>. Play with the calculator below to see it in action. Keyboard events work when focussed. Hold <pre>shift+C</pre> to clear all.</p>
           <p>Check out the source code at <a href="https://github.com/andybflynn/Calculator">https://github.com/andybflynn/Calculator</a></p>
           <iframe class="calculator-frame" src="https://andybflynn.github.io/portfolio/calculator/"></iframe>

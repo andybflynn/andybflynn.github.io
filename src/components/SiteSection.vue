@@ -18,7 +18,7 @@ defineProps({
 <template>
   <section aria-label="{title}" class="section" :id="id">
     <header>
-      <h3>{{ title }}</h3>
+      <h2>{{ title }}</h2>
     </header>
     <div :class="['section__content'].concat(classes).join(' ')">
       <slot />
@@ -50,7 +50,7 @@ defineProps({
     padding-left: 5%;
     transition: background-color 0.4s;
 
-    h3 {
+    h2 {
       margin: 0;
     }
   }
