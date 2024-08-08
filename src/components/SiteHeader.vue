@@ -26,6 +26,14 @@ defineProps({
 @import "@/assets/scss/variables";
 @import "@/assets/scss/placeholders";
 
+@at-root {
+  #body.dark {
+    .mainHeader h1 {
+      color: #aaa;
+    }
+  }
+}
+
 .mainHeader {
   align-items: center;
   display: flex;
